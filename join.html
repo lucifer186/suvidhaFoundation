@@ -1,0 +1,193 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <!-- Required meta tags-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Colorlib Templates">
+        <meta name="author" content="Colorlib">
+        <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Suvidha Foundation || Join Form</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/1_7mI1sH0nRs-S17kC1Cs_kg.png" >
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/join.css" rel="stylesheet" media="all">
+    		<!-- Main CSS -->
+            <link rel="stylesheet" href="css/main.css">
+  </head>
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url(img/background.jpg);
+    background-repeat: no-repeat;
+background-attachment: scroll;
+background-position: center center;
+-webkit-background-size: cover;
+background-size: cover;">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <?php if(isset($_SESSION['status']))
+                {
+                    ?>
+                    <div class="alert" role="alert">
+                        <strong></strong><?php echo $_SESSION['status'];  ?>.
+                        <label for="show" class="close-btn  fas fa-times" onclick="closeform()" title="close" id="bank"></label>
+                      </div>
+                    <?php
+                    unset($_SESSION['status']);
+                }  ?>
+                <div class="card-body">
+                    <h2 class="title text-center">Join Form</h2>
+                    <form method="post" action="http://localhost/joinform.php">
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">First name</label>
+                                    <input class="input--style-4" type="text" name="firstName" id="firstName required">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">last name</label>
+                                    <input class="input--style-4" type="text" name="lastName" id="lastName" required>
+                                </div>
+                            </div>
+                        </div>
+                     
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">     <i class="fas fa-envelope"></i> Email</label>
+                                    <input class="input--style-4" type="email" name="email" id="emailAddress">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">     <i class="fas fa-phone"></i> Phone Number</label>
+                                    <input class="input--style-4" type="text" name="phone" id="phoneNumber" required>
+                                </div>
+                            </div>
+                          
+                        </div>
+                        <div class="col-2 text-class">
+                            <div class="input-group">
+                                <label class="label"><i class="fas fa-location"></i> Address</label>
+                                <textarea cols="2" rows="2" class="input--style-4" name="address" required></textarea>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label"><i class="fas fa-graduation-cap"></i>Category</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="chooseOptions" >
+                                    <option value="not select" disabled="disabled" selected="selected">Choose option</option>
+                                    <option value="webdevelopment">Web Development Intern</option>
+                                    <option  value="machinelearning">Machine Learning Intern</option>
+                                    <option value="digital">Digital Marketing Intern</option>
+                                    <option value="content">Content Writer Intern</option>
+                                    <option value="public">Public Relations Intern</option>
+                                    <option value="bda">BDA Intern</option>
+                                    <option value="marketing">Marketing Intern</option>
+                                    <option value="expertmentor">Expert Mentor</option>
+                                    <option value="volun">Volunteer</option>
+                                    <option value="advisor">Advisor</option>
+                                    <option value="socialmediamarketing">Social Media Marketing</option>
+                                    <option value="humanresource">Human Resource Management</option>
+                                    <option value="graphicdesigner">Graphic designer</option>
+                                    <option value="digitalwriter">Digital Marketing</option>
+                                    <option value="contentwriter">Content Writer</option>
+                                    <option value="codingtutor">Coding Tutor</option>
+                                    <option value="languagetutor">Language Tutor (different languages)</option>
+                                    <option value="Operationintern">Operation Management Intern</option>
+                                    <option value="publicrelation">Public Relation</option>
+                                    <option value="instamarketing">Instagram Marketing</option>
+                                    <option value="fbmarketing">Facebook Marketing</option>
+                                    <option value="emailmarketing">Email Marketing</option>
+                                    <option value="linkedin">LinkedIn marketing</option>
+                                    <option value="Administration">Administration</option>
+                                    <option value="dataentry">Data Entry</option>
+                                    <option value="onlineevent">Online Event Management</option>
+                                    <option value="contactcreator">Content creator</option>
+                                    <option value="youtube">Youtube Marketing</option>
+                                    <option value="social">Social work</option>
+                                    <option value="fund">Fundraiser</option>
+                                    <option value="mentor" >Mentor</option>
+                                    <option value="trainer">Trainer</option>
+                                    <option value="finance">Finance</option>
+                                    <option value="other">Others</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label">  <i class="fas fa-calendar "></i> Duration</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="durationmonth" >
+                                    <option value="not select" disabled="disabled" selected="selected">Choose option</option>
+                                    <option value="1month">1 Month</option>
+                                    <option value="2month">2 Months</option>
+                                    <option value="3month">3 Months</option>
+                                    <option value="6month">6 Months</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="p-t-15">
+                            <input type="submit" class="butt" value="SUBMIT" name="join">
+                        </div>
+                    </form>
+                    <div class="p-t-15">
+                        <a class="nav-link mx-4 nav-items butt" style="text-decoration: none;text-align:center  " href="/index.html">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+    <script src="https://kit.fontawesome.com/fbef90ff54.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+
+
+         <script>
+            function closeform(){
+                const btn = document.getElementById("bank");
+                const alertbutton = document.querySelector('.alert');
+                btn.addEventListener('click',()=>{
+                    alertbutton.classList.add('menu');
+                    console.log("button clicked");
+
+                })
+                
+
+            }
+         </script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

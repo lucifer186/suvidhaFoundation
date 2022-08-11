@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: px;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+.containerG {
+  width: 100%;
+  text-align: center;
+}
+.containerG h2 {
+  font-weight: normal;
+  font-size: 33px;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.containerG h2::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: #efb66c;
+  bottom: -10px;
+  left: 50%;
+  transform: translatex(-50%);
+  animation: animate 4s linear infinite;
+}
+@keyframes animate {
+  0% {
+    width: 100px;
+  }
+  50% {
+    width: 200px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+.pp1 {
+  margin-top: 50px;
+}
+
+.containerG h3 {
+  font-weight: normal;
+  font-size: 30px;
+  position: relative;
+  margin: 10px;
+  text-align: left;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+.containerG ol li h4 {
+  font-weight: normal;
+  font-size: 20px;
+  position: relative;
+  margin: 10px;
+  text-align: left;
+}
+.containerG .list .num {
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: 0.25s;
+}
+.containerG .list .num:nth-child(0):before {
+  content: '0';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #f9ab01cf;
+  width: 2rem;
+  opacity: 0.1;
+  transition: 0.25s;
+}
+.containerG .list .num:nth-child(1):before {
+  content: '1';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #f9ab01cf;
+  width: 2rem;
+  opacity: 0.1;
+  transition: 0.25s;
+}
+.containerG .list .num:nth-child(2):before {
+  content: '2';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #f9ab01cf;
+  width: 2rem;
+  opacity: 0.1;
+  transition: 0.25s;
+}
+.containerG .list .num:nth-child(3):before {
+  content: '3';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #f9ab01cf;
+  width: 2rem;
+  opacity: 0.1;
+  transition: 0.25s;
+}
+.containerG .list .num:nth-child(4):before {
+  content: '4';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #f9ab01cf;
+  width: 2rem;
+  opacity: 0.1;
+  transition: 0.25s;
+}
+.containerG .list .num:nth-child(5):before {
+  content: '5';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #f9ab01cf;
+  width: 2rem;
+  opacity: 0.1;
+  transition: 0.25s;
+}
+.containerG .list .num:nth-child(6):before {
+  content: '6';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #f9ab01cf;
+  width: 2rem;
+  opacity: 0.1;
+  transition: 0.25s;
+}
+.containerG .list .num:nth-child(7):before {
+  content: '7';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #f9ab01cf;
+  width: 2rem;
+  opacity: 0.1;
+  transition: 0.25s;
+}
+.containerG .list .num:nth-child(8):before {
+  content: '8';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #f9ab01cf;
+  width: 2rem;
+  opacity: 0.1;
+  transition: 0.25s;
+}
+.containerG .list .num:nth-child(9):before {
+  content: '9';
+  font-size: 4rem;
+  font-weight: bold;
+  color: #f9ab01cf;
+  width: 2rem;
+  opacity: 0.1;
+  transition: 0.25s;
+}
+.containerG .list .num h3 {
+  position: relative;
+  left: -4rem;
+  color: #3d3d3d;
+  font-size: 18px;
+  transition: 0.25s;
+}
+.containerG .list .num:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}
+.containerG .list .num:hover:before {
+  opacity: 1;
+}
+.containerG .list .num:hover h3 {
+  left: 1rem;
+}
+
